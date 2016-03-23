@@ -1,0 +1,1 @@
+In searcher, we implement methods of IAuctionSearch interface: spatialSearch() and getXMLDataForItemId(). 

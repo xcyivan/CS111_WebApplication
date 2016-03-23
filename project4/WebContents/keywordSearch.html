@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>keyWordSearch</title>
+<style>
+    		body{
+    			 background-color: #66cccc;
+    		}
+    		h1 {
+    			padding-top: 50px;
+    			color: #330099;
+    			text-align: center;
+                padding-bottom: 50px;
+			}
+			div{
+				
+    			color:#333366;
+    			text-align: center;
+			}
+			
+</style>
+
+
+
+
+<script type="text/javascript" src="autoSuggestControl.js"></script>
+<script type="text/javascript" src="suggestionProvider.js"></script>
+<link rel="stylesheet" type="text/css" href="autoSuggest.css" />
+<script type="text/javascript">
+	window.onload = function(){
+		var oTextbox = new AutoSuggestControl(document.getElementById("qtxt"), new SuggestionProvider());
+	}
+</script>
+</head>
+
+<body>
+
+
+
+<form method="get" action="./search">
+<h1> Keyword Search Page </h1>
+<div>
+Keyword: 
+<input type="text" name="q" id="qtxt"><br><br>
+<input type="hidden" name="numResultsToSkip" value = "0" readonly><br>
+<input type="hidden" name="numResultsToReturn" value = "20" readonly><br>
+<input type="submit" value="Search"><br>
+</div>
+</form>
+
+</body>
+</html>
